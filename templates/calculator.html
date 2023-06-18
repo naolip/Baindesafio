@@ -1,0 +1,129 @@
+<!-- Para o desenvolvimento front-end, foram utilizadas fontes como GPT-3 e Bing Chat para construção. Pequenas modificações foram realizadas com base no meu conhecimento nas tecnologias -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title> Calcular Endereços </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        .calculator-form {
+            margin-bottom: 20px;
+        }
+        .calculator-form .form-group {
+            margin-bottom: 10px;
+        }
+        .calculator-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .calculator-form input[type="text"] {
+            width: 100%;
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .calculator-form button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .calculator-result {
+            margin-bottom: 20px;
+        }
+        .calculator-result p {
+            font-weight: bold;
+        }
+        .history-section {
+            margin-top: 40px;
+        }
+        .history-section h2 {
+            margin-bottom: 10px;
+        }
+        .history-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .history-section ul li {
+            margin-bottom: 5px;
+        }
+        .history-link {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .history-link i {
+            margin-right: 5px;
+        }
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+        .success-message {
+            color: #008000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Calcule a distancia em Km entre os dois endereços </h1>
+        <form class="calculator-form" method="POST" action="{{ url_for('calculator') }}">
+            <div class="form-group">
+                <label for="address_origin">Origem:</label>
+                <input type="text" id="address_origin" name="address_origin" required>
+            </div>
+            <div class="form-group">
+                <label for="address_destination">Destino:</label>
+                <input type="text" id="address_destination" name="address_destination" required>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if error_message %}
+            <div class="error-message">
+                {{ error_message }}
+            </div>
+        {% endif %}
+        {% if consulta_realizada %}
+            <div class="success-message">
+                Consulta realizada com sucesso!
+            </div>
+        {% endif %}
+        {% if historico %}
+            <div class="history-section">
+                <h2>Histórico de Consultas</h2>
+                <ul>
+                    {% for item in historico %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <a href="{{ url_for('home') }}" class="history-link"><i class="fas fa-chevron-left"></i>Voltar para Home</a>
+    </div>
+</body>
+</html>

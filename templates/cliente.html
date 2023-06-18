@@ -1,0 +1,44 @@
+<!-- Para o desenvolvimento front-end, foram utilizadas fontes como GPT-3 e Bing Chat para construção. Pequenas modificações foram realizadas com base no meu conhecimento nas tecnologias -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App Delivery - Olá, Cliente!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        .home-link {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .home-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Olá, Cliente!</h1>
+        <a href="{{ url_for('home') }}" class="home-link"><i class="fas fa-chevron-left"></i>Voltar para Home</a>
+    </div>
+</body>
+</html>

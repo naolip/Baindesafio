@@ -1,0 +1,1 @@
+9999999999{"name": "geographiclib", "version": "2.0", "summary": "The geodesic routines from GeographicLib", "platform": null, "requires_dist": null, "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

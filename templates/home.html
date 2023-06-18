@@ -1,0 +1,60 @@
+<!-- Para o desenvolvimento front-end, foram utilizadas fontes como GPT-3 e Bing Chat para construção. Pequenas modificações foram realizadas com base no meu conhecimento nas tecnologias -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>App Delivery </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile-buttons .btn {
+            margin: 0 10px;
+            height: 50px;
+        }
+        .calculator-button {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+        }
+        .history-link {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .history-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delivery APP</h1>
+        <div class="profile-buttons">
+            <a href="{{ url_for('cliente') }}" class="btn btn-primary">Cliente</a>
+            <a href="{{ url_for('entregador') }}" class="btn btn-primary">Entregador</a>
+        </div>
+        <a href="{{ url_for('calculator') }}" class="btn btn-primary calculator-button">Calculador Distâncias Entre Endereços</a>
+        <a href="{{ url_for('historico_view') }}" class="history-link"><i class="fas fa-history"></i>Histórico</a>
+    </div>
+</body>
+</html>
