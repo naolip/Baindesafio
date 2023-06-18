@@ -16,7 +16,7 @@ https://bain.nayaraoliveira.repl.co/
 
 3. Descreva a metodologia de trabalho que você usaria para o desenvolvimento. Pode ser alguma metodologia conhecida (Scrum, XP, RUP), uma adaptação ou uma mistura entre várias metodologias. O que sua experiência mostrou que funciona. Diga-nos por que você acha que essa forma é apropriada para nosso problema.
 
-   - Utilizaria a metodologia Scrum, realizando a divisão do projeto em pequenas sprints. Realizaria pequenas reuniões diárias para revisar o processo e ajustar o time de desenvolvimento, trazendo evolução e feedback constantes.
+   - Utilizaria a metodologia Scrum, realizando a divisão do projeto em pequenas sprints. Realizar pequenas reuniões diárias para revisar o processo e ajustar o time de desenvolvimento, trazendo evolução e feedback constantes.
 
 4. Descreva o fluxo de trabalho que você usaria para colaborar usando o Git. Assim como em (3), você pode usar algo familiar ou fazer uma adaptação.
 
