@@ -1,3 +1,6 @@
+URL da aplicação
+https://bain.nayaraoliveira.repl.co/
+
 ## Documentação do Desafio Delivery App
 
 ### Perguntas
