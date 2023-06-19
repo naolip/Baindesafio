@@ -52,3 +52,5 @@ O histórico das consultas é realizado e armazenado em uma lista. A página mos
 Esta documentação abrange os principais aspectos do software "App Delivery". Descreve sua estrutura, funcionalidades, tecnologias utilizadas e integração com a API Nominatim.
 
 O "App Delivery" é uma solução web que simplifica a interação entre clientes e entregadores, fornecendo recursos para cálculo de distâncias entre endereços e facilitando a gestão de tarefas de entrega.
+
+https://bain.nayaraoliveira.repl.co/
